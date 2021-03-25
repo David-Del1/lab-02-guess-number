@@ -35,7 +35,7 @@ a {
 }
 
 .container {
-  height: 320px;
+  height: 50%;
   display: flex;
   justify-content: center;
   /* border: 1px solid red; */
@@ -54,6 +54,26 @@ a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: var(--rusty);
+}
+
+.image-container {
+  display: none;
+  position: absolute;
+  top: 500px;
+}
+
+.image-container.winner {
+  display: flex;
+}
+
+.image-container-2 {
+  display: none;
+  position: absolute;
+  top: 500px;
+}
+
+.image-container-2.loser {
+  display: flex;
 }
 
 .num-box {

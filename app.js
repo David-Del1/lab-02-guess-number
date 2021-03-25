@@ -14,11 +14,12 @@ const input = document.getElementById('input');
 const numBox = document.getElementById('numBox');
 const triesBox = document.getElementById('tries-box');
 const messageBox = document.getElementById('messageBox');
+const imgContainer = document.getElementById('imageContainer');
+const imgContainer2 = document.getElementById('imageContainer-2');
 
 
 
 button.addEventListener('click', () => {
-    //console.log(randomNumber);
     const inputNum = Number(input.value);
 
     const comparison = compareNumbers(inputNum, randomNumber)
@@ -28,6 +29,7 @@ button.addEventListener('click', () => {
         messageBox.textContent = "Hooray! You got it right!"
         button.style.display = "none";
         tryAgainBtn.classList.add('toggle')
+        imgContainer.classList.add('winner')
     }
 
     if (comparison === -1) {
@@ -47,6 +49,7 @@ button.addEventListener('click', () => {
          triesBox.textContent = 0;
          button.style.display = "none";
          tryAgainBtn.classList.add('toggle')
+         imgContainer2.classList.add('loser')
     }
 
     
